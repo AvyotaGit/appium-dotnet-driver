@@ -148,6 +148,7 @@ namespace OpenQA.Selenium.Appium
         /// </summary>
         /// <param name="selector">The selector to use in finding the element.</param>
         /// <returns></returns>
+        [Obsolete("Support for IOS UIAutomation is deprecated and will be removed in the next release")]
         public static By IosUIAutomation(string selector) => new ByIosUIAutomation(selector);
 
         public static By WindowsAutomation(string selector) => new ByWindowsAutomation(selector);
@@ -207,6 +208,7 @@ namespace OpenQA.Selenium.Appium
     /// Finds element when the Ios UIAutomation selector has the specified value.
     /// <see cref="https://developer.apple.com/library/tvos/documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/UIAutomation.html"/>
     /// </summary>
+    [Obsolete("Support for IOS UIAutomation is deprecated and will be removed in the next release")]
     public class ByIosUIAutomation : MobileBy
     {
         /// <summary>
@@ -262,8 +264,8 @@ namespace OpenQA.Selenium.Appium
         /// </summary>
         /// <param name="selector">The selector to use in finding the element.</param>
         public ByIosNSPredicate(string selector)
-            : base(selector, "IFindsByIosNSPredicate", "FindElementByIosNsPredicate", "FindElementsByIosNsPredicate",
-                MobileSelector.iOSPredicateString)
+            : base(selector, "IFindsByIosNSPredicate", "FindElementByIosNSPredicate", "FindElementsByIosNSPredicate",
+                MobileSelector.IosNSPredicateString)
         {
         }
 
@@ -279,7 +281,7 @@ namespace OpenQA.Selenium.Appium
         /// <param name="selector">The selector to use in finding the element.</param>
         public ByIosClassChain(string selector)
             : base(selector, "IFindsByIosClassChain", "FindElementByIosClassChain", "FindElementsByIosClassChain",
-                MobileSelector.iOSClassChain)
+                MobileSelector.IosClassChain)
         {
         }
 

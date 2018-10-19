@@ -23,13 +23,13 @@ namespace OpenQA.Selenium.Appium.Interfaces
         /// </summary>
         /// <param name="selector">an IosNsPredicate selector</param>
         /// <returns>IWebElement object so that you can interact that object</returns>
-        W FindElementByIosNsPredicate(string selector);
+        W FindElementByIosNSPredicate(string selector);
 
         /// <summary>
         /// Finds a list of elements that match the IosNsPredicate selector supplied
         /// </summary>
         /// <param name="selector">an IosNsPredicate selector</param>
         /// <returns>ReadOnlyCollection of IWebElement objects so that you can interact with those objects</returns>
-        ReadOnlyCollection<W> FindElementsByIosNsPredicate(string selector);
+        ReadOnlyCollection<W> FindElementsByIosNSPredicate(string selector);
     }
 }

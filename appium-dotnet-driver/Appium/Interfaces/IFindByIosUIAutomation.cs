@@ -16,6 +16,7 @@ using System.Collections.ObjectModel;
 
 namespace OpenQA.Selenium.Appium.Interfaces
 {
+    [System.Obsolete("Support for IOS UIAutomation is deprecated and will be removed in the next release")]
     public interface IFindByIosUIAutomation<W> : IFindsByFluentSelector<W> where W : IWebElement
     {
         /// <summary>
@@ -23,6 +24,8 @@ namespace OpenQA.Selenium.Appium.Interfaces
         /// </summary>
         /// <param name="selector">an Ios UIAutomation selector</param>
         /// <returns>IWebElement object so that you can interact that object</returns>
+        [System.Obsolete("Support for IOS UIAutomation is deprecated and will be removed in the next release." +
+                         "Use FindElementByIosNSPredicate or FindElementByIosClassChain")]
         W FindElementByIosUIAutomation(string selector);
 
         /// <summary>
@@ -30,6 +33,8 @@ namespace OpenQA.Selenium.Appium.Interfaces
         /// </summary>
         /// <param name="selector">an Ios UIAutomation selector</param>
         /// <returns>IWebElement object so that you can interact that object</returns>
+        [System.Obsolete("Support for IOS UIAutomation is deprecated and will be removed in the next release." +
+                         "Use FindElementByIosNSPredicate or FindElementsByIosClassChain")]
         ReadOnlyCollection<W> FindElementsByIosUIAutomation(string selector);
     }
 }

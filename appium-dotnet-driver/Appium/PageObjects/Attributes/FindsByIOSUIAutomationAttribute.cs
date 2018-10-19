@@ -18,6 +18,7 @@ using System;
 namespace OpenQA.Selenium.Appium.PageObjects.Attributes
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property | AttributeTargets.Class, AllowMultiple = true)]
+    [Obsolete("Support for IOS UIAutomation is deprecated and will be removed in the next release. Use FindsByXCUITestAttribute instead")]
     public class FindsByIOSUIAutomationAttribute : FindsByUIAutomatorsAttribute
     {
         /// <summary>
