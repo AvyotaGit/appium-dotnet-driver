@@ -22,7 +22,7 @@ using System.Collections.ObjectModel;
 namespace OpenQA.Selenium.Appium.iOS
 {
     public class IOSElement : AppiumWebElement,
-        IFindByIosUIAutomation<AppiumWebElement>
+        IFindByIosUIAutomation<AppiumWebElement>, IFindsByIosNSPredicate<AppiumWebElement>, IFindsByIosClassChain<AppiumWebElement>
     {
         /// <summary>
         /// Initializes a new instance of the IOSElement class.
@@ -34,15 +34,39 @@ namespace OpenQA.Selenium.Appium.iOS
         {
         }
 
-
         #region IFindByIosUIAutomation Members
 
+        [Obsolete("Support for IOS UIAutomation is deprecated and will be removed in the next release." +
+                         "Use FindElementByIosNSPredicate or FindElementByIosClassChain instead")]
         public AppiumWebElement FindElementByIosUIAutomation(string selector) =>
             FindElement(MobileSelector.iOSAutomatoion, selector);
 
+
+        [Obsolete("Support for IOS UIAutomation is deprecated and will be removed in the next release." +
+                         "Use FindElementsByIosNSPredicate or FindElementsByIosClassChain instead")]
         public ReadOnlyCollection<AppiumWebElement> FindElementsByIosUIAutomation(string selector) =>
             FindElements(MobileSelector.iOSAutomatoion, selector);
 
         #endregion IFindByIosUIAutomation Members
+
+        #region IFindByIosNSPredicate Members
+
+        public AppiumWebElement FindElementByIosNSPredicate(string selector) =>
+            FindElement(MobileSelector.IosNSPredicateString, selector);
+
+        public ReadOnlyCollection<AppiumWebElement> FindElementsByIosNSPredicate(string selector) =>
+            FindElements(MobileSelector.IosNSPredicateString, selector);
+
+        #endregion IFindByIosNSPredicate Members
+
+        #region IFindsByIosClassChain
+
+        public AppiumWebElement FindElementByIosClassChain(string selector) =>
+            FindElement(MobileSelector.IosClassChain, selector);
+
+        public ReadOnlyCollection<AppiumWebElement> FindElementsByIosClassChain(string selector) =>
+            FindElements(MobileSelector.IosClassChain, selector);
+
+        #endregion
     }
 }

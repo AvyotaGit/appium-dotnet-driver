@@ -122,8 +122,10 @@ namespace OpenQA.Selenium.Appium.iOS
 
         #region IFindByIosUIAutomation Members
 
+        [System.Obsolete("Support for IOS UIAutomation is deprecated and will be removed in the next release")]
         public W FindElementByIosUIAutomation(string selector) => FindElement(MobileSelector.iOSAutomatoion, selector);
 
+        [System.Obsolete("Support for IOS UIAutomation is deprecated and will be removed in the next release")]
         public ReadOnlyCollection<W> FindElementsByIosUIAutomation(string selector) =>
             FindElements(MobileSelector.iOSAutomatoion, selector);
 
@@ -131,20 +133,20 @@ namespace OpenQA.Selenium.Appium.iOS
 
         #region IFindsByIosClassChain Members
 
-        public W FindElementByIosClassChain(string selector) => FindElement(MobileSelector.iOSClassChain, selector);
+        public W FindElementByIosClassChain(string selector) => FindElement(MobileSelector.IosClassChain, selector);
 
         public ReadOnlyCollection<W> FindElementsByIosClassChain(string selector) =>
-            FindElements(MobileSelector.iOSClassChain, selector);
+            FindElements(MobileSelector.IosClassChain, selector);
 
         #endregion IFindsByIosClassChain Members
 
         #region IFindsByIosNSPredicate Members
 
-        public W FindElementByIosNsPredicate(string selector) =>
-            FindElement(MobileSelector.iOSPredicateString, selector);
+        public W FindElementByIosNSPredicate(string selector) =>
+            FindElement(MobileSelector.IosNSPredicateString, selector);
 
-        public ReadOnlyCollection<W> FindElementsByIosNsPredicate(string selector) =>
-            FindElements(MobileSelector.iOSPredicateString, selector);
+        public ReadOnlyCollection<W> FindElementsByIosNSPredicate(string selector) =>
+            FindElements(MobileSelector.IosNSPredicateString, selector);
 
         #endregion IFindsByIosNSPredicate Members
 
