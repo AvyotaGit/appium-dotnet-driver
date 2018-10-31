@@ -20,7 +20,7 @@ namespace Appium.Integration.Tests.Helpers
         public static AppiumOptions getIos112Caps(string app)
         {
             AppiumOptions capabilities = new AppiumOptions();
-            capabilities.AddAdditionalCapability(MobileCapabilityType.AutomationName, AutomationName.iOSXcuiTest);
+            capabilities.AddAdditionalCapability(MobileCapabilityType.AutomationName, AutomationName.IosXCUITest);
             capabilities.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "11.2");
             capabilities.AddAdditionalCapability(MobileCapabilityType.DeviceName, "iPad Air 2");
             capabilities.AddAdditionalCapability(MobileCapabilityType.App, app);
