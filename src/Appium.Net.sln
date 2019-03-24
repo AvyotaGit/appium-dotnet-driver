@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appium.Net.Integration.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appium.Net", "Appium.Net\Appium.Net.csproj", "{F83BBAB0-9359-45AF-BADC-6A338EF668F6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appium.Net.Integration.Tests.PageObjects", "..\test\integration.PageObjects\Appium.Net.Integration.Tests.PageObjects.csproj", "{09EDC708-38BF-468D-AF44-2325DE5FE620}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{F83BBAB0-9359-45AF-BADC-6A338EF668F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F83BBAB0-9359-45AF-BADC-6A338EF668F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F83BBAB0-9359-45AF-BADC-6A338EF668F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09EDC708-38BF-468D-AF44-2325DE5FE620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09EDC708-38BF-468D-AF44-2325DE5FE620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09EDC708-38BF-468D-AF44-2325DE5FE620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09EDC708-38BF-468D-AF44-2325DE5FE620}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
