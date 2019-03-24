@@ -1,10 +1,10 @@
-﻿using Appium.Net.Integration.Tests.helpers;
-using Appium.Net.Integration.Tests.PageObjects;
+﻿using Appium.Net.Integration.Tests.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.PageObjects;
 using OpenQA.Selenium.Appium.Windows;
 using System;
+using Appium.Net.Integration.Tests.Helpers;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.Windows
 {

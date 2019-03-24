@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Appium.Net.Integration.Tests.helpers;
+using Appium.Net.Integration.Tests.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.PageObjects;

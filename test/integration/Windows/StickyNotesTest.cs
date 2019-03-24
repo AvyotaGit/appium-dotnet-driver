@@ -14,11 +14,11 @@
 //
 //******************************************************************************
 
-using Appium.Net.Integration.Tests.helpers;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Windows;
 using System;
+using Appium.Net.Integration.Tests.Helpers;
 
 namespace Appium.Net.Integration.Tests.Windows
 {
