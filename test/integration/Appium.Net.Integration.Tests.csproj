@@ -4,9 +4,12 @@
     <istestproject>true</istestproject>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="apps\**" />
-    <EmbeddedResource Remove="apps\**" />
-    <None Remove="apps\**" />
+    <EmbeddedResource Include="Apps\ApiDemos-debug.apk" />
+    <EmbeddedResource Include="Apps\IntentExample.apk" />
+    <EmbeddedResource Include="Apps\TestApp.app.zip" />
+    <EmbeddedResource Include="Apps\UICatalog.app.zip" />
+    <EmbeddedResource Include="Apps\vodqa.app.zip" />
+    <EmbeddedResource Include="Apps\WebViewApp.app.zip" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
