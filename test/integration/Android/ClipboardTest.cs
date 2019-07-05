@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
-using Appium.Net.Integration.Tests.helpers;
+using Appium.Net.Integration.Tests.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.Android;
@@ -8,7 +8,7 @@ using OpenQA.Selenium.Appium.Enums;
 
 namespace Appium.Net.Integration.Tests.Android
 {
-    [TestFixture(Category = "Device")]
+    [TestFixture(Category = CommandCategory.Device_Clipboard)]
     public class ClipboardTest
     {
         private AndroidDriver<IWebElement> _driver;
