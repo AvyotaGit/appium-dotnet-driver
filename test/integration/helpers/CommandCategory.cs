@@ -6,7 +6,7 @@ namespace Appium.Net.Integration.Tests.Helpers
     /// Provides string constants relating the category of each Appium command.
     /// Commands-Category mappings can be determined via the command section on appium.io
     /// </summary>
-    public class CommandCategory
+    public static class CommandCategory
     {
         #region Appium Specific
         public const string Appium_Status = "Status";

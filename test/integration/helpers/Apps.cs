@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Appium.Net.Integration.Tests.Properties;
 
-namespace Appium.Net.Integration.Tests.helpers
+namespace Appium.Net.Integration.Tests.Helpers
 {
     public class Apps
     {

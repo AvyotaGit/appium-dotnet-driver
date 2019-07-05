@@ -1,4 +1,4 @@
-﻿using Appium.Net.Integration.Tests.helpers;
+﻿using Appium.Net.Integration.Tests.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.iOS;
