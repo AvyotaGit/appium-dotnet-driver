@@ -8,6 +8,7 @@ using OpenQA.Selenium.Appium.Android;
 
 namespace Appium.Net.Integration.Tests.Android
 {
+    [TestFixture(Category = CommandCategory.Device_Files)]
     class FileInteractionTest
     {
         private AndroidDriver<IWebElement> _driver;

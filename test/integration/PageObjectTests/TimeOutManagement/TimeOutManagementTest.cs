@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Appium.Net.Integration.Tests.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.PageObjects;
@@ -9,6 +10,7 @@ using SeleniumExtras.PageObjects;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.TimeOutManagement
 {
+    [TestFixture(Category = CommandCategory.Undefined)]
     public class TimeOutManagementTest
     {
         private IWebDriver _driver;
@@ -52,7 +54,6 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.TimeOutManagement
 
             return (now <= deadline & start.Add(span) <= now);
         }
-
 
         [Test]
         public void CheckAbilityToChangeWaitingTime()

@@ -5,6 +5,7 @@ using OpenQA.Selenium.Appium.iOS;
 
 namespace Appium.Net.Integration.Tests.IOS
 {
+    [TestFixture(Category = CommandCategory.Device_Interactions)]
     internal class LockDeviceTest
     {
         private IOSDriver<IWebElement> _driver;

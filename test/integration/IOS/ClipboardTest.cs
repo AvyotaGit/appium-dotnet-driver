@@ -11,7 +11,7 @@ using OpenQA.Selenium.Appium.iOS;
 
 namespace Appium.Net.Integration.Tests.IOS
 {
-    [TestFixture(Category = "Device")]
+    [TestFixture(Category = CommandCategory.Device_Clipboard)]
     public class ClipboardTest
     {
         private IOSDriver<IWebElement> _driver;

@@ -9,7 +9,8 @@ using OpenQA.Selenium.Appium.Interfaces;
 
 namespace Appium.Net.Integration.Tests.Android
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Session)]
+    [Category(CommandCategory.Context)]
     public class WebviewTest
     {
         private IWebDriver _driver;

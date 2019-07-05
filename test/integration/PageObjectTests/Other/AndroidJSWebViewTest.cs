@@ -8,6 +8,7 @@ using OpenQA.Selenium.Appium.Android;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.Other
 {
+    [TestFixture(Category = CommandCategory.Web)]
     class AndroidJsWebViewTest
     {
         private AndroidDriver<AppiumWebElement> _driver;

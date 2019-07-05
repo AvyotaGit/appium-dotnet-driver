@@ -20,6 +20,7 @@ using OpenQA.Selenium.Remote;
 
 namespace Appium.Net.Integration.Tests.Windows
 {
+    [TestFixture(Category = CommandCategory.Element_Actions)]
     public class ClickElementTest
     {
         private WindowsDriver<WindowsElement> _calculatorSession;

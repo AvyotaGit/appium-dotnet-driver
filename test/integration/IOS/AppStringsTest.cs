@@ -6,6 +6,7 @@ using OpenQA.Selenium.Appium.iOS;
 
 namespace Appium.Net.Integration.Tests.IOS
 {
+    [TestFixture(Category = CommandCategory.Device_App)]
     public class AppStringsTest
     {
         private AppiumDriver<IWebElement> _driver;

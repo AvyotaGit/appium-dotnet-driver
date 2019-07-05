@@ -9,7 +9,7 @@ using SeleniumExtras.PageObjects;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.IOS
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
     public class TestThatChecksAttributeMix
     {
         private IOSDriver<AppiumWebElement> _driver;

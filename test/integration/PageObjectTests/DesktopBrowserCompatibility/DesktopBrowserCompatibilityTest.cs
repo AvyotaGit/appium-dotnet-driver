@@ -11,7 +11,8 @@ using SeleniumExtras.PageObjects;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.DesktopBrowserCompatibility
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
+    [Category(CommandCategory.Element_FindElements)]
     public class DesktopBrowserCompatibilityTest
     {
         private IWebDriver _driver;

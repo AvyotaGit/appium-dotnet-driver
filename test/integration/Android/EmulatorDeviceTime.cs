@@ -6,6 +6,7 @@ using OpenQA.Selenium.Appium.Android;
 
 namespace Appium.Net.Integration.Tests.Android
 {
+    [TestFixture(Category = CommandCategory.Device_System)]
     class EmulatorDeviceTime
     {
         private AppiumDriver<AndroidElement> _driver;

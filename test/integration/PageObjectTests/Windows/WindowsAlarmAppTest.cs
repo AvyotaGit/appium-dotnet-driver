@@ -8,6 +8,8 @@ using System;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.Windows
 {
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
+    [Category(CommandCategory.Element_FindElements)]
     public class WindowsAlarmAppTest
     {
         private AppiumDriver<AppiumWebElement> _driver;
