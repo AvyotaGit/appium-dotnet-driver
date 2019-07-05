@@ -9,7 +9,9 @@ using SeleniumExtras.PageObjects;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.Android
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
+    [Category(CommandCategory.Element_FindElements)]
+    [Category(CommandCategory.Element_Attributes)]
     public class NativeAppAttributesTest
     {
         private AndroidDriver<AppiumWebElement> _driver;

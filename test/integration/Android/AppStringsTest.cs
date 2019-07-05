@@ -6,7 +6,7 @@ using OpenQA.Selenium.Appium.Android;
 
 namespace Appium.Net.Integration.Tests.Android
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Device_App)]
     public class AppStringsTest
     {
         private AppiumDriver<IWebElement> _driver;

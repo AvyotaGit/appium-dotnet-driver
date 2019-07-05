@@ -5,7 +5,7 @@ using OpenQA.Selenium.Appium.iOS;
 
 namespace Appium.Net.Integration.Tests.IOS
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Session_Geolocation)]
     class LocationTest
     {
         private AppiumDriver<IOSElement> _driver;

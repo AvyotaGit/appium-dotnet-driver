@@ -4,6 +4,7 @@ using OpenQA.Selenium.Appium.Android;
 
 namespace Appium.Net.Integration.Tests.Android
 {
+    [TestFixture(Category = CommandCategory.Device_Interactions)]
     class LockDeviceTest
     {
         private AndroidDriver<AndroidElement> _driver;

@@ -9,7 +9,7 @@ using SeleniumExtras.PageObjects;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.Other
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Interactions_Touch)]
     class AndroidTouchActionTest
     {
         private AndroidDriver<AppiumWebElement> _driver;

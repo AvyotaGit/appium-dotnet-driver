@@ -9,7 +9,7 @@ using SeleniumExtras.PageObjects;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.Android
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Element_Attributes)]
     public class SeleniumAttributesCompatibilityTest
     {
         private AndroidDriver<AppiumWebElement> _driver;

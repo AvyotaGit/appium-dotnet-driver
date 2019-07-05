@@ -10,6 +10,7 @@ using SeleniumExtras.PageObjects;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.Android
 {
+    [TestFixture(Category = CommandCategory.Context)]
     public class WebViewTest
     {
         private AndroidDriver<AppiumWebElement> _driver;
@@ -33,10 +34,7 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.Android
         public void AfterEach()
         {
             _driver?.Quit();
-            if (!Env.ServerIsRemote())
-            {
-                AppiumServers.StopLocalService();
-            }
+            if (!Env.ServerIsRemote()) AppiumServers.StopLocalService();
         }
 
         [Test]
@@ -50,10 +48,7 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.Android
                 for (var i = 0; i < contexts.Count; i++)
                 {
                     Console.WriteLine(contexts[i]);
-                    if (contexts[i].Contains("WEBVIEW"))
-                    {
-                        webviewContext = contexts[i];
-                    }
+                    if (contexts[i].Contains("WEBVIEW")) webviewContext = contexts[i];
                 }
                 Assert.IsNotNull(webviewContext);
                 _driver.Context = webviewContext;

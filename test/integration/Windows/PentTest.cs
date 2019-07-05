@@ -19,7 +19,6 @@ using System.Drawing;
 using System.Threading;
 using System.Collections.Generic;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Appium.Interactions;
 using OpenQA.Selenium.Appium.Windows;
@@ -35,6 +34,7 @@ using Appium.Net.Integration.Tests.Helpers;
 
 namespace Appium.Net.Integration.Tests.Windows
 {
+    [TestFixture(Category = CommandCategory.Interactions_W3C_Actions)]
     public class PenTest : StickyNotesTest
     {
         private WindowsDriver<WindowsElement> newStickyNoteSession;
