@@ -9,7 +9,9 @@ using SeleniumExtras.PageObjects;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.IOS
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
+    [Category(CommandCategory.Element_FindElements)]
+    [Category(CommandCategory.Element_Attributes)]
     public class NativeAppAttributesTest
     {
         private IOSDriver<AppiumWebElement> _driver;

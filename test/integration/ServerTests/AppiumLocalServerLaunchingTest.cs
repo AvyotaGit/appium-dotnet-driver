@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Threading;
+using Appium.Net.Integration.Tests.Helpers;
 using Appium.Net.Integration.Tests.Properties;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -13,7 +14,7 @@ using OpenQA.Selenium.Appium.Service.Options;
 
 namespace Appium.Net.Integration.Tests.ServerTests
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Session)]
     public class AppiumLocalServerLaunchingTest
     {
         private string _pathToCustomizedAppiumJs;

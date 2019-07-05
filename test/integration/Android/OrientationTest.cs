@@ -5,7 +5,7 @@ using OpenQA.Selenium.Appium.Android;
 
 namespace Appium.Net.Integration.Tests.Android
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Device_Interactions)]
     class OrientationTest
     {
         private IWebDriver _driver;

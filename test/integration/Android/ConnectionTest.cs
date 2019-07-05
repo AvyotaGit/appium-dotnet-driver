@@ -6,7 +6,7 @@ using OpenQA.Selenium.Appium.Android;
 
 namespace Appium.Net.Integration.Tests.Android
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Device_Network)]
     class ConnectionTest
     {
         private AppiumDriver<IWebElement> _driver;

@@ -5,7 +5,7 @@ using OpenQA.Selenium.Appium.iOS;
 
 namespace Appium.Net.Integration.Tests.IOS
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Device_Interactions)]
     public class OrientationTest
     {
         private IWebDriver _driver;

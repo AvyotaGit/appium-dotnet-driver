@@ -6,6 +6,7 @@ using OpenQA.Selenium.Appium.iOS;
 
 namespace Appium.Net.Integration.Tests.IOS
 {
+    [TestFixture(Category = CommandCategory.Undefined)]
     public class AlertTest
     {
         private AppiumDriver<IOSElement> _driver;

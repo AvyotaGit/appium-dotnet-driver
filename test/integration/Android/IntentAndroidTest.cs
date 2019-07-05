@@ -5,6 +5,7 @@ using OpenQA.Selenium.Appium.Android;
 
 namespace Appium.Net.Integration.Tests.Android
 {
+    [TestFixture(Category = CommandCategory.Device_Activity)]
     class IntentAndroidTest
     {
         private AndroidDriver<AppiumWebElement> _driver;

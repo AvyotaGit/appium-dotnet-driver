@@ -8,6 +8,8 @@ namespace Appium.Net.Integration.Tests.Helpers
     /// </summary>
     public static class CommandCategory
     {
+        public const string Undefined = "Undefined";
+
         #region Appium Specific
         public const string Appium_Status = "Status";
         public const string Appium_ExecuteMobileCommand = "Execute_Mobile_Command";

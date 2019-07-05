@@ -5,6 +5,7 @@ using OpenQA.Selenium.Appium.Android.Enums;
 
 namespace Appium.Net.Integration.Tests.Android
 {
+    [TestFixture(Category = CommandCategory.Device_Keys)]
     class KeyPressTest
     {
         private AndroidDriver<AndroidElement> _driver;

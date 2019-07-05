@@ -22,6 +22,7 @@ using System;
 
 namespace Appium.Net.Integration.Tests.Windows
 {
+    [TestFixture(Category = CommandCategory.Session)]
     public class StickyNotesTest
     {
         private const string StickyNotesAppId = @"Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe!App";

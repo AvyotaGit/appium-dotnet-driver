@@ -24,6 +24,8 @@ using OpenQA.Selenium.Appium.Windows;
 
 namespace Appium.Net.Integration.Tests.Windows
 {
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
+    [Category(CommandCategory.Element_FindElements)]
     public class MultiSelectControlTest
     {
         private WindowsDriver<WindowsElement> _driver;
