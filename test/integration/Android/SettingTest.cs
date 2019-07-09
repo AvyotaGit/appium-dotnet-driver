@@ -7,6 +7,7 @@ using OpenQA.Selenium.Appium.Android.Enums;
 
 namespace Appium.Net.Integration.Tests.Android
 {
+    [TestFixture(Category = CommandCategory.Session_Settings)]
     public class SettingTest
     {
         private AndroidDriver<AppiumWebElement> _driver;

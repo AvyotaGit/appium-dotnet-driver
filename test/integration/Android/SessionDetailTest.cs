@@ -7,7 +7,7 @@ using OpenQA.Selenium.Appium.Enums;
 
 namespace Appium.Net.Integration.Tests.Android
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Session)]
     public class SessionDetailTest
     {
         

@@ -1,13 +1,15 @@
-﻿using Appium.Net.Integration.Tests.PageObjects;
+﻿using Appium.Net.Integration.Tests.Helpers;
+using Appium.Net.Integration.Tests.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.PageObjects;
 using OpenQA.Selenium.Appium.Windows;
 using System;
-using Appium.Net.Integration.Tests.Helpers;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.Windows
 {
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
+    [Category(CommandCategory.Element_FindElements)]
     public class WindowsAlarmAppTest
     {
         private AppiumDriver<AppiumWebElement> _driver;
@@ -36,7 +38,7 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.Windows
         { 
             var alarmApp = new WindowsAlarmApp(_driver, new TimeOutDuration(TimeSpan.FromSeconds(2)));
 
-            alarmApp.SwitchToClockTab();
+            //alarmApp.SwitchToClockTab();
             var localTimeText = alarmApp.LocalTime;
 
             alarmApp.SwitchToAlarmTab();

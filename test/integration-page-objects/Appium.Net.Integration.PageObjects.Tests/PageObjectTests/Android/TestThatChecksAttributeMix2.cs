@@ -9,11 +9,11 @@ using SeleniumExtras.PageObjects;
 
 namespace Appium.Net.Integration.Tests.PageObjectTests.Android
 {
-    [TestFixture]
-    public class TestThatChecksAttributeMix1
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
+    public class TestThatChecksAttributeMix2
     {
         private AndroidDriver<AppiumWebElement> _driver;
-        private AndroidPageObjectChecksAttributeMixOnNativeApp1 _pageObject;
+        private AndroidPageObjectChecksAttributeMixOnNativeApp2 _pageObject;
 
         [OneTimeSetUp]
         public void BeforeAll()
@@ -24,7 +24,7 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.Android
             var serverUri = Env.ServerIsRemote() ? AppiumServers.RemoteServerUri : AppiumServers.LocalServiceUri;
             _driver = new AndroidDriver<AppiumWebElement>(serverUri, capabilities, Env.InitTimeoutSec);
             var timeSpan = new TimeOutDuration(new TimeSpan(0, 0, 0, 5, 0));
-            _pageObject = new AndroidPageObjectChecksAttributeMixOnNativeApp1();
+            _pageObject = new AndroidPageObjectChecksAttributeMixOnNativeApp2();
             PageFactory.InitElements(_driver, _pageObject, new AppiumPageObjectMemberDecorator(timeSpan));
         }
 

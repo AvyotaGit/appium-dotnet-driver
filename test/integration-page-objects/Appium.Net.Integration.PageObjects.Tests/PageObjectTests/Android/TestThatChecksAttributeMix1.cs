@@ -3,34 +3,28 @@ using Appium.Net.Integration.Tests.Helpers;
 using Appium.Net.Integration.Tests.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium;
-using OpenQA.Selenium.Appium.iOS;
+using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.PageObjects;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjectTests.IOS
+namespace Appium.Net.Integration.Tests.PageObjectTests.Android
 {
-    [TestFixture]
-    public class NativeAppAttributesTest
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
+    public class TestThatChecksAttributeMix1
     {
-        private IOSDriver<AppiumWebElement> _driver;
-        private IosPageObjectChecksAttributesForNativeIosApp _pageObject;
+        private AndroidDriver<AppiumWebElement> _driver;
+        private AndroidPageObjectChecksAttributeMixOnNativeApp1 _pageObject;
 
         [OneTimeSetUp]
         public void BeforeAll()
         {
-            var capabilities = Caps.GetIosCaps(Apps.Get("iosTestApp"));
-            if (Env.ServerIsRemote())
-            {
-                capabilities.AddAdditionalCapability("username", Env.GetEnvVar("SAUCE_USERNAME"));
-                capabilities.AddAdditionalCapability("accessKey", Env.GetEnvVar("SAUCE_ACCESS_KEY"));
-                capabilities.AddAdditionalCapability("name", "ios - actions");
-                capabilities.AddAdditionalCapability("tags", new[] {"sample"});
-            }
-
+            var capabilities = Env.ServerIsRemote()
+                ? Caps.GetAndroidCaps(Apps.Get("androidApiDemos"))
+                : Caps.GetAndroidCaps(Apps.Get("androidApiDemos"));
             var serverUri = Env.ServerIsRemote() ? AppiumServers.RemoteServerUri : AppiumServers.LocalServiceUri;
-            _driver = new IOSDriver<AppiumWebElement>(serverUri, capabilities, Env.InitTimeoutSec);
+            _driver = new AndroidDriver<AppiumWebElement>(serverUri, capabilities, Env.InitTimeoutSec);
             var timeSpan = new TimeOutDuration(new TimeSpan(0, 0, 0, 5, 0));
-            _pageObject = new IosPageObjectChecksAttributesForNativeIosApp();
+            _pageObject = new AndroidPageObjectChecksAttributeMixOnNativeApp1();
             PageFactory.InitElements(_driver, _pageObject, new AppiumPageObjectMemberDecorator(timeSpan));
         }
 
@@ -77,7 +71,8 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.IOS
         [Test]
         public void CheckElementsFoundUsingMultipleLocators()
         {
-            Assert.GreaterOrEqual(_pageObject.GetMultipleFindByElementSize(), 1);
+            Assert.GreaterOrEqual(_pageObject.GetMultipleFindByElementSize(), 10);
+            Assert.LessOrEqual(_pageObject.GetMultipleFindByElementSize(), 14);
         }
 
         [Test]
@@ -89,7 +84,34 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.IOS
         [Test]
         public void CheckElementsFoundUsingMultipleLocatorssProperty()
         {
-            Assert.GreaterOrEqual(_pageObject.GetMultipleFindByElementPropertySize(), 1);
+            Assert.GreaterOrEqual(_pageObject.GetMultipleFindByElementPropertySize(), 10);
+            Assert.LessOrEqual(_pageObject.GetMultipleFindByElementSize(), 14);
+        }
+
+        [Test]
+        public void CheckElementFoundByChainedSearch()
+        {
+            Assert.NotNull(_pageObject.GetFoundByChainedSearchElementText());
+        }
+
+        [Test]
+        public void CheckElementsFoundByChainedSearch()
+        {
+            Assert.GreaterOrEqual(_pageObject.GetFoundByChainedSearchElementSize(), 10);
+            Assert.LessOrEqual(_pageObject.GetMultipleFindByElementSize(), 14);
+        }
+
+        [Test]
+        public void CheckFoundByChainedSearchElementProperty()
+        {
+            Assert.NotNull(_pageObject.GetFoundByChainedSearchElementPropertyText());
+        }
+
+        [Test]
+        public void CheckFoundByChainedSearchElementsProperty()
+        {
+            Assert.GreaterOrEqual(_pageObject.GetFoundByChainedSearchElementPropertySize(), 10);
+            Assert.LessOrEqual(_pageObject.GetMultipleFindByElementSize(), 14);
         }
 
         [Test]

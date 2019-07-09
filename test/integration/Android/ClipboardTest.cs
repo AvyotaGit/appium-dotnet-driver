@@ -8,7 +8,7 @@ using OpenQA.Selenium.Appium.Enums;
 
 namespace Appium.Net.Integration.Tests.Android
 {
-    [TestFixture(Category = "Device")]
+    [TestFixture(Category = CommandCategory.Device_Clipboard)]
     public class ClipboardTest
     {
         private AndroidDriver<IWebElement> _driver;

@@ -7,7 +7,7 @@ using OpenQA.Selenium.Appium.iOS;
 
 namespace Appium.Net.Integration.Tests.IOS
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Device_ScreenRecording)]
     class ScreenRecordingTest
     {
         private IOSDriver<AppiumWebElement> _driver;

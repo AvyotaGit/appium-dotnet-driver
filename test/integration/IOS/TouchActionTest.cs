@@ -8,7 +8,7 @@ using OpenQA.Selenium.Appium.MultiTouch;
 
 namespace Appium.Net.Integration.Tests.IOS
 {
-    [TestFixture]
+    [TestFixture(Category = CommandCategory.Interactions_Touch)]
     public class TouchActionTest
     {
         private AppiumDriver<IWebElement> _driver;

@@ -3,28 +3,26 @@ using Appium.Net.Integration.Tests.Helpers;
 using Appium.Net.Integration.Tests.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium;
-using OpenQA.Selenium.Appium.Android;
+using OpenQA.Selenium.Appium.iOS;
 using OpenQA.Selenium.Appium.PageObjects;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjectTests.Android
+namespace Appium.Net.Integration.Tests.PageObjectTests.IOS
 {
-    [TestFixture]
-    public class SeleniumAttributesCompatibilityTest
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
+    public class TestThatChecksAttributeMix
     {
-        private AndroidDriver<AppiumWebElement> _driver;
-        private AndroidPageObjectChecksSeleniumFindsByCompatibility _pageObject;
+        private IOSDriver<AppiumWebElement> _driver;
+        private IosPageObjectChecksAttributeMixOnNativeApp _pageObject;
 
         [OneTimeSetUp]
         public void BeforeAll()
         {
-            var capabilities = Env.ServerIsRemote()
-                ? Caps.GetAndroidCaps(Apps.Get("androidApiDemos"))
-                : Caps.GetAndroidCaps(Apps.Get("androidApiDemos"));
+            var capabilities = Caps.GetIosCaps(Apps.Get("iosTestApp"));
             var serverUri = Env.ServerIsRemote() ? AppiumServers.RemoteServerUri : AppiumServers.LocalServiceUri;
-            _driver = new AndroidDriver<AppiumWebElement>(serverUri, capabilities, Env.InitTimeoutSec);
+            _driver = new IOSDriver<AppiumWebElement>(serverUri, capabilities, Env.InitTimeoutSec);
             var timeSpan = new TimeOutDuration(new TimeSpan(0, 0, 0, 5, 0));
-            _pageObject = new AndroidPageObjectChecksSeleniumFindsByCompatibility();
+            _pageObject = new IosPageObjectChecksAttributeMixOnNativeApp();
             PageFactory.InitElements(_driver, _pageObject, new AppiumPageObjectMemberDecorator(timeSpan));
         }
 
@@ -36,30 +34,6 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.Android
             {
                 AppiumServers.StopLocalService();
             }
-        }
-
-        [Test]
-        public void CheckElement()
-        {
-            Assert.NotNull(_pageObject.GetElementText());
-        }
-
-        [Test]
-        public void CheckElements()
-        {
-            Assert.GreaterOrEqual(_pageObject.GetElementSize(), 1);
-        }
-
-        [Test]
-        public void CheckElementProperty()
-        {
-            Assert.NotNull(_pageObject.GetElementPropertyText());
-        }
-
-        [Test]
-        public void CheckElementsProperty()
-        {
-            Assert.GreaterOrEqual(_pageObject.GetElementPropertySize(), 1);
         }
 
         [Test]
@@ -95,8 +69,7 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.Android
         [Test]
         public void CheckElementsFoundUsingMultipleLocators()
         {
-            Assert.GreaterOrEqual(_pageObject.GetMultipleFindByElementSize(), 10);
-            Assert.LessOrEqual(_pageObject.GetMultipleFindByElementSize(), 14);
+            Assert.GreaterOrEqual(_pageObject.GetMultipleFindByElementSize(), 1);
         }
 
         [Test]
@@ -108,34 +81,7 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.Android
         [Test]
         public void CheckElementsFoundUsingMultipleLocatorssProperty()
         {
-            Assert.GreaterOrEqual(_pageObject.GetMultipleFindByElementPropertySize(), 10);
-            Assert.LessOrEqual(_pageObject.GetMultipleFindByElementSize(), 14);
-        }
-
-        [Test]
-        public void CheckElementFoundByChainedSearch()
-        {
-            Assert.NotNull(_pageObject.GetFoundByChainedSearchElementText());
-        }
-
-        [Test]
-        public void CheckElementsFoundByChainedSearch()
-        {
-            Assert.GreaterOrEqual(_pageObject.GetFoundByChainedSearchElementSize(), 10);
-            Assert.LessOrEqual(_pageObject.GetMultipleFindByElementSize(), 14);
-        }
-
-        [Test]
-        public void CheckFoundByChainedSearchElementProperty()
-        {
-            Assert.NotNull(_pageObject.GetFoundByChainedSearchElementPropertyText());
-        }
-
-        [Test]
-        public void CheckFoundByChainedSearchElementsProperty()
-        {
-            Assert.GreaterOrEqual(_pageObject.GetFoundByChainedSearchElementPropertySize(), 10);
-            Assert.LessOrEqual(_pageObject.GetMultipleFindByElementSize(), 14);
+            Assert.GreaterOrEqual(_pageObject.GetMultipleFindByElementPropertySize(), 1);
         }
 
         [Test]

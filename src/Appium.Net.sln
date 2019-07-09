@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DD79BA21-B485-411E-B132-0C1A462FFABF}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appium.Net.Integration.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appium.Net", "Appium.Net\Appium.Net.csproj", "{F83BBAB0-9359-45AF-BADC-6A338EF668F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appium.Net.Integration.Tests.PageObjects", "..\test\integration.PageObjects\Appium.Net.Integration.Tests.PageObjects.csproj", "{09EDC708-38BF-468D-AF44-2325DE5FE620}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appium.Net.Integration.PageObjects.Tests", "..\test\integration-page-objects\Appium.Net.Integration.PageObjects.Tests\Appium.Net.Integration.PageObjects.Tests.csproj", "{29591F1E-83B2-4417-BA59-1210519AA2B4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F83BBAB0-9359-45AF-BADC-6A338EF668F6} = {F83BBAB0-9359-45AF-BADC-6A338EF668F6}
+		{278EE5EC-9414-43D8-B8C0-E7B4F8C8D283} = {278EE5EC-9414-43D8-B8C0-E7B4F8C8D283}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +33,10 @@ Global
 		{F83BBAB0-9359-45AF-BADC-6A338EF668F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F83BBAB0-9359-45AF-BADC-6A338EF668F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F83BBAB0-9359-45AF-BADC-6A338EF668F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09EDC708-38BF-468D-AF44-2325DE5FE620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09EDC708-38BF-468D-AF44-2325DE5FE620}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09EDC708-38BF-468D-AF44-2325DE5FE620}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09EDC708-38BF-468D-AF44-2325DE5FE620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29591F1E-83B2-4417-BA59-1210519AA2B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29591F1E-83B2-4417-BA59-1210519AA2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29591F1E-83B2-4417-BA59-1210519AA2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29591F1E-83B2-4417-BA59-1210519AA2B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

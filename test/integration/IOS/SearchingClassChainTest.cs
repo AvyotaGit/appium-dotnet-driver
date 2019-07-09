@@ -5,6 +5,7 @@ using OpenQA.Selenium.Appium.iOS;
 
 namespace Appium.Net.Integration.Tests.IOS
 {
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
     public class SearchingClassChainTest
     {
         private IOSDriver<AppiumWebElement> _driver;

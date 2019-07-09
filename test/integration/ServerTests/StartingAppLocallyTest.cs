@@ -10,6 +10,7 @@ using OpenQA.Selenium.Appium.Service.Options;
 
 namespace Appium.Net.Integration.Tests.ServerTests
 {
+    [TestFixture(Category = CommandCategory.Session)]
     class StartingAppLocallyTest
     {
         [Test]

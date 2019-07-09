@@ -6,6 +6,7 @@ using OpenQA.Selenium.Appium.Android;
 
 namespace Appium.Net.Integration.Tests.Android
 {
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
     public class ElementTest
     {
         private AndroidDriver<AndroidElement> _driver;
