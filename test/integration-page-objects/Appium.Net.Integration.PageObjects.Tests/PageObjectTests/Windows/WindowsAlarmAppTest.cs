@@ -38,7 +38,7 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.Windows
         { 
             var alarmApp = new WindowsAlarmApp(_driver, new TimeOutDuration(TimeSpan.FromSeconds(2)));
 
-            alarmApp.SwitchToClockTab();
+            //alarmApp.SwitchToClockTab();
             var localTimeText = alarmApp.LocalTime;
 
             alarmApp.SwitchToAlarmTab();
