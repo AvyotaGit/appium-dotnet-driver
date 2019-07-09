@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/LaoluBensonCorp/Appium.Net-Fork/_apis/build/status/akinsolb.appium-dotnet-driver?branchName=master)](https://dev.azure.com/LaoluBensonCorp/Appium.Net-Fork/_build/latest?definitionId=1&branchName=master)
 # appium-dotnet-driver
 
 This driver is an extension of the [Selenium](http://docs.seleniumhq.org/) C# client. It has 

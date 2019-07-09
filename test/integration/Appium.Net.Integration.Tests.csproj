@@ -1,11 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net45</TargetFrameworks>
+    <istestproject>true</istestproject>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="apps\**" />
-    <EmbeddedResource Remove="apps\**" />
-    <None Remove="apps\**" />
+    <EmbeddedResource Include="Apps\ApiDemos-debug.apk" />
+    <EmbeddedResource Include="Apps\IntentExample.apk" />
+    <EmbeddedResource Include="Apps\TestApp.app.zip" />
+    <EmbeddedResource Include="Apps\UICatalog.app.zip" />
+    <EmbeddedResource Include="Apps\vodqa.app.zip" />
+    <EmbeddedResource Include="Apps\WebViewApp.app.zip" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Castle.Core" Version="4.3.1" />

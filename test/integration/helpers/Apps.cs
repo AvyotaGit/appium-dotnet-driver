@@ -9,6 +9,12 @@ namespace Appium.Net.Integration.Tests.Helpers
     {
         private static bool _isInited;
         private static Dictionary<string, string> _testApps;
+        private const string ApiDemos_debugQualifiedName = "Appium.Net.Integration.Tests.Apps.ApiDemos-debug.apk";
+        private const string TestApp_appQualifiedName = "Appium.Net.Integration.Tests.Apps.TestApp.app.zip";
+        private const string WebViewApp_appQualifiedName = "Appium.Net.Integration.Tests.Apps.WebViewApp.app.zip";
+        private const string UICatalog_appQualifiedName = "Appium.Net.Integration.Tests.Apps.UICatalog.app.zip";
+        private const string IntentExampleQualifiedName = "Appium.Net.Integration.Tests.Apps.IntentExample.apk";
+        private const string vodqaQualifiedName = "Appium.Net.Integration.Tests.Apps.vodqa.app.zip";
 
         private static string _testAppsDir = $"{AppDomain.CurrentDomain.BaseDirectory}..//..//..//apps";
 
@@ -30,18 +36,16 @@ namespace Appium.Net.Integration.Tests.Helpers
                 }
                 else
                 {
-                    var tempFolder = Path.GetTempPath();
+                    var tempFolder = $"{Path.GetTempPath()}/AppiumTestApps";
+                    if (!Directory.Exists(tempFolder)) Directory.CreateDirectory(tempFolder);
 
-                    File.WriteAllBytes($"{tempFolder}/ApiDemos-debug.apk", Resources.ApiDemos_debug);
-                    File.WriteAllBytes($"{tempFolder}/TestApp.app.zip", Resources.TestApp_app);
-                    File.WriteAllBytes($"{tempFolder}/WebViewApp.app.zip", Resources.WebViewApp_app);
-                    File.WriteAllBytes($"{tempFolder}/UICatalog.app.zip", Resources.UICatalog_app);
-                    File.WriteAllBytes($"{tempFolder}/IntentExample.apk", Resources.IntentExample);
-                    File.WriteAllBytes($"{tempFolder}/vodqa.app.zip", Resources.vodqa);
-
-
-
-
+                    Console.WriteLine("Passed in name" + ApiDemos_debugQualifiedName);
+                    File.WriteAllBytes($"{tempFolder}/ApiDemos-debug.apk", ResourceHelper.GetBytes<Resources>(ApiDemos_debugQualifiedName));
+                    File.WriteAllBytes($"{tempFolder}/TestApp.app.zip", ResourceHelper.GetBytes<Resources>(TestApp_appQualifiedName));
+                    File.WriteAllBytes($"{tempFolder}/WebViewApp.app.zip", ResourceHelper.GetBytes<Resources>(WebViewApp_appQualifiedName));
+                    File.WriteAllBytes($"{tempFolder}/UICatalog.app.zip", ResourceHelper.GetBytes<Resources>(UICatalog_appQualifiedName));
+                    File.WriteAllBytes($"{tempFolder}/IntentExample.apk", ResourceHelper.GetBytes<Resources>(IntentExampleQualifiedName));
+                    File.WriteAllBytes($"{tempFolder}/vodqa.app.zip", ResourceHelper.GetBytes<Resources>(vodqaQualifiedName));
 
                     _testApps = new Dictionary<string, string>
                     {
