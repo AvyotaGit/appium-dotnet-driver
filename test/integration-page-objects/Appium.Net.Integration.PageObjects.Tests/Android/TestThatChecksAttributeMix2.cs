@@ -1,19 +1,19 @@
 ﻿using System;
+using Appium.Net.Integration.PageObjects.Tests.PageObjects;
 using Appium.Net.Integration.Tests.Helpers;
-using Appium.Net.Integration.Tests.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.PageObjects;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjectTests.Android
+namespace Appium.Net.Integration.PageObjects.Tests.Android
 {
-    [TestFixture(Category = CommandCategory.Element_Attributes)]
-    public class SeleniumAttributesCompatibilityTest
+    [TestFixture(Category = CommandCategory.Element_FindElement)]
+    public class TestThatChecksAttributeMix2
     {
         private AndroidDriver<AppiumWebElement> _driver;
-        private AndroidPageObjectChecksSeleniumFindsByCompatibility _pageObject;
+        private AndroidPageObjectChecksAttributeMixOnNativeApp2 _pageObject;
 
         [OneTimeSetUp]
         public void BeforeAll()
@@ -24,7 +24,7 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.Android
             var serverUri = Env.ServerIsRemote() ? AppiumServers.RemoteServerUri : AppiumServers.LocalServiceUri;
             _driver = new AndroidDriver<AppiumWebElement>(serverUri, capabilities, Env.InitTimeoutSec);
             var timeSpan = new TimeOutDuration(new TimeSpan(0, 0, 0, 5, 0));
-            _pageObject = new AndroidPageObjectChecksSeleniumFindsByCompatibility();
+            _pageObject = new AndroidPageObjectChecksAttributeMixOnNativeApp2();
             PageFactory.InitElements(_driver, _pageObject, new AppiumPageObjectMemberDecorator(timeSpan));
         }
 
@@ -36,30 +36,6 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.Android
             {
                 AppiumServers.StopLocalService();
             }
-        }
-
-        [Test]
-        public void CheckElement()
-        {
-            Assert.NotNull(_pageObject.GetElementText());
-        }
-
-        [Test]
-        public void CheckElements()
-        {
-            Assert.GreaterOrEqual(_pageObject.GetElementSize(), 1);
-        }
-
-        [Test]
-        public void CheckElementProperty()
-        {
-            Assert.NotNull(_pageObject.GetElementPropertyText());
-        }
-
-        [Test]
-        public void CheckElementsProperty()
-        {
-            Assert.GreaterOrEqual(_pageObject.GetElementPropertySize(), 1);
         }
 
         [Test]

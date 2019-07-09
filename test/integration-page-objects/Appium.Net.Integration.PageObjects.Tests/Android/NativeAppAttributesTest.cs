@@ -1,19 +1,21 @@
 ﻿using System;
+using Appium.Net.Integration.PageObjects.Tests.PageObjects;
 using Appium.Net.Integration.Tests.Helpers;
-using Appium.Net.Integration.Tests.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.PageObjects;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjectTests.Android
+namespace Appium.Net.Integration.PageObjects.Tests.Android
 {
     [TestFixture(Category = CommandCategory.Element_FindElement)]
-    public class TestThatChecksAttributeMix1
+    [Category(CommandCategory.Element_FindElements)]
+    [Category(CommandCategory.Element_Attributes)]
+    public class NativeAppAttributesTest
     {
         private AndroidDriver<AppiumWebElement> _driver;
-        private AndroidPageObjectChecksAttributeMixOnNativeApp1 _pageObject;
+        private AndroidPageObjectChecksAttributesForNativeAndroidApp _pageObject;
 
         [OneTimeSetUp]
         public void BeforeAll()
@@ -24,7 +26,7 @@ namespace Appium.Net.Integration.Tests.PageObjectTests.Android
             var serverUri = Env.ServerIsRemote() ? AppiumServers.RemoteServerUri : AppiumServers.LocalServiceUri;
             _driver = new AndroidDriver<AppiumWebElement>(serverUri, capabilities, Env.InitTimeoutSec);
             var timeSpan = new TimeOutDuration(new TimeSpan(0, 0, 0, 5, 0));
-            _pageObject = new AndroidPageObjectChecksAttributeMixOnNativeApp1();
+            _pageObject = new AndroidPageObjectChecksAttributesForNativeAndroidApp();
             PageFactory.InitElements(_driver, _pageObject, new AppiumPageObjectMemberDecorator(timeSpan));
         }
 

@@ -1,13 +1,13 @@
 ﻿using System;
+using Appium.Net.Integration.PageObjects.Tests.PageObjects;
 using Appium.Net.Integration.Tests.Helpers;
-using Appium.Net.Integration.Tests.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.iOS;
 using OpenQA.Selenium.Appium.PageObjects;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjectTests.IOS
+namespace Appium.Net.Integration.PageObjects.Tests.IOS
 {
     [TestFixture(Category = CommandCategory.Element_FindElement)]
     public class TestThatChecksAttributeMix

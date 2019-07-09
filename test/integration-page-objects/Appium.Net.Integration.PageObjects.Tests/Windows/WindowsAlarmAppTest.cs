@@ -1,12 +1,12 @@
-﻿using Appium.Net.Integration.Tests.Helpers;
-using Appium.Net.Integration.Tests.PageObjects;
+﻿using System;
+using Appium.Net.Integration.PageObjects.Tests.PageObjects;
+using Appium.Net.Integration.Tests.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.PageObjects;
 using OpenQA.Selenium.Appium.Windows;
-using System;
 
-namespace Appium.Net.Integration.Tests.PageObjectTests.Windows
+namespace Appium.Net.Integration.PageObjects.Tests.Windows
 {
     [TestFixture(Category = CommandCategory.Element_FindElement)]
     [Category(CommandCategory.Element_FindElements)]

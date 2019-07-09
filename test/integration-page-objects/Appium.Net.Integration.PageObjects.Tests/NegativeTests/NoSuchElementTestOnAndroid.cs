@@ -9,7 +9,7 @@ using OpenQA.Selenium.Appium.PageObjects;
 using OpenQA.Selenium.Appium.PageObjects.Attributes;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjectTests.NegativeTests
+namespace Appium.Net.Integration.PageObjects.Tests.NegativeTests
 {
     [TestFixture(Category = CommandCategory.Element_FindElement)]
     public class NoSuchElementTestOnAndroid

@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjectTests.DesktopBrowserCompatibility
+namespace Appium.Net.Integration.PageObjects.Tests.DesktopBrowserCompatibility
 {
     class FoundLinks
     {

@@ -8,7 +8,7 @@ using OpenQA.Selenium.Appium.PageObjects.Attributes;
 using OpenQA.Selenium.Firefox;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjectTests.TimeOutManagement
+namespace Appium.Net.Integration.PageObjects.Tests.TimeOutManagement
 {
     [TestFixture(Category = CommandCategory.Undefined)]
     public class TimeOutManagementTest

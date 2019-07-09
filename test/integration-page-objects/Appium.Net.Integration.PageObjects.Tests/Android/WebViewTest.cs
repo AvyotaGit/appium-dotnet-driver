@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Threading;
+using Appium.Net.Integration.PageObjects.Tests.PageObjects;
 using Appium.Net.Integration.Tests.Helpers;
-using Appium.Net.Integration.Tests.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.PageObjects;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjectTests.Android
+namespace Appium.Net.Integration.PageObjects.Tests.Android
 {
     [TestFixture(Category = CommandCategory.Context)]
     public class WebViewTest

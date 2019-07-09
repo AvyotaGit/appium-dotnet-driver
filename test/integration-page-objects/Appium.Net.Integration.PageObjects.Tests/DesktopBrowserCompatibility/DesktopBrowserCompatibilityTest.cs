@@ -9,7 +9,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Internal;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjectTests.DesktopBrowserCompatibility
+namespace Appium.Net.Integration.PageObjects.Tests.DesktopBrowserCompatibility
 {
     [TestFixture(Category = CommandCategory.Element_FindElement)]
     [Category(CommandCategory.Element_FindElements)]
