@@ -4,7 +4,7 @@ using OpenQA.Selenium.Appium.PageObjects.Attributes;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjects
+namespace Appium.Net.Integration.PageObjects.Tests.PageObjects
 {
     public class AndroidWebView
     {

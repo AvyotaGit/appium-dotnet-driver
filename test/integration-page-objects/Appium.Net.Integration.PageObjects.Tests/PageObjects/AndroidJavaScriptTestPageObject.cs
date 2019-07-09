@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.PageObjects;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjects
+namespace Appium.Net.Integration.PageObjects.Tests.PageObjects
 {
     class AndroidJavaScriptTestPageObject
     {

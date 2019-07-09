@@ -3,7 +3,7 @@ using OpenQA.Selenium.Appium.iOS;
 using OpenQA.Selenium.Appium.Interfaces;
 using OpenQA.Selenium.Appium.PageObjects.Attributes;
 
-namespace Appium.Net.Integration.Tests.PageObjects
+namespace Appium.Net.Integration.PageObjects.Tests.PageObjects
 {
     public class IosPageObjectChecksAttributesForNativeIosApp
     {

@@ -4,7 +4,7 @@ using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Interfaces;
 using SeleniumExtras.PageObjects;
 
-namespace Appium.Net.Integration.Tests.PageObjects
+namespace Appium.Net.Integration.PageObjects.Tests.PageObjects
 {
     public class AndroidPageObjectChecksSeleniumFindsByCompatibility
     {
