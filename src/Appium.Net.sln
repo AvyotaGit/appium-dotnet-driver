@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DD79BA21-B485-411E-B132-0C1A462FFABF}"
 	ProjectSection(SolutionItems) = preProject
 		..\.travis.yml = ..\.travis.yml
+		..\CHANGELOG.MD = ..\CHANGELOG.MD
 		..\azure-pipelines.yml = ..\azure-pipelines.yml
 	EndProjectSection
 EndProject
