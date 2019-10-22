@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Enums;
 
-namespace Appium.Net.Integration.Tests.Helpers
+namespace Appium.Net.Integration.Tests.helpers
 {
     public class Caps
     {
