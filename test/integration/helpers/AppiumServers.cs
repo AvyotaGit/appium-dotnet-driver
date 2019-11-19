@@ -2,7 +2,7 @@
 using System.IO;
 using OpenQA.Selenium.Appium.Service;
 
-namespace Appium.Net.Integration.Tests.helpers
+namespace Appium.Net.Integration.Tests.Helpers
 {
     public class AppiumServers
     {

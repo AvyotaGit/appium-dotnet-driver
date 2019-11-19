@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Appium.Net.Integration.Tests.Helpers
+﻿namespace Appium.Net.Integration.Tests.Helpers
 {
     /// <summary>
     /// Provides string constants relating the category of each Appium command.

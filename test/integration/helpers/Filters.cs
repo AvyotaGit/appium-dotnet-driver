@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using OpenQA.Selenium;
 
-namespace Appium.Net.Integration.Tests.helpers
+namespace Appium.Net.Integration.Tests.Helpers
 {
     public class Filters
     {
